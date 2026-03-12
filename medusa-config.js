@@ -1,6 +1,9 @@
+console.log("--- MEDUSA CONFIG LOADING ---");
 const { loadEnv, defineConfig } = require('@medusajs/framework/utils')
 
 loadEnv(process.env.NODE_ENV || 'development', process.cwd())
+
+console.log("DATABASE_URL present:", !!process.env.DATABASE_URL);
 
 module.exports = defineConfig({
   projectConfig: {
